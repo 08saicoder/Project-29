@@ -8,11 +8,19 @@ class SlingShot{
         }
 
         World.add(world, this.polygonImage);
+
+        this.pointB = pointB
+        this.sling = Constraint.create(options);
+        World.add(world, this.sling);
     }
 
     fly(){
         this.sling.bodyA = null;
     }
 
+    if(this.sling.bodyA){
+        var pointA = this.sling.bodyA.position;
+        var pointB = this.pointB;
+    }
 
 }

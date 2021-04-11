@@ -44,10 +44,29 @@ function setup() {
   //top
   block16 = new Block(390,155,30,40);
 
+
+  //set 2 for second stand
+  //level one
+  block1 = new Block(640,175,30,40);
+  block2 = new Block(670,175,30,40);
+  block3 = new Block(700,175,30,40);
+  block4 = new Block(730,175,30,40);
+  block5 = new Block(760,175,30,40);
+  //level two
+  block6 = new Block(670,135,30,40);
+  block7 = new Block(700,135,30,40);
+  block8 = new Block(730,135,30,40);
+  //top
+  block9 = new Block(700,95,30,40);
+
+  //creating a round type shape.
+  ball = Bodies.circle(50,200,20);
+  World.add(world,ball);
+
   //creating polygon
-  polygonObject = new Object(150, 150);
+    slingshot = new SlingShot(bird.body,{x:100, y:200});
 
-
+  //set one
   dectectcollision(polygonObject, block1);
   dectectcollision(polygonObject, block2);
   dectectcollision(polygonObject, block3);
@@ -65,7 +84,18 @@ function setup() {
   dectectcollision(polygonObject, block15);
   dectectcollision(polygonObject, block16);
 
+  //set two
+  dectectcollision(polygonObject, block1);
+  dectectcollision(polygonObject, block2);
+  dectectcollision(polygonObject, block3);
+  dectectcollision(polygonObject, block4);
+  dectectcollision(polygonObject, block5);
+  dectectcollision(polygonObject, block6);
+  dectectcollision(polygonObject, block7);
+  dectectcollision(polygonObject, block8);
+  dectectcollision(polygonObject, block9);
 }
+
 function draw() {
   background(56,44,44); 
  
@@ -98,6 +128,20 @@ function draw() {
   block15.display();
   fill("grey");
   block16.display();
+
+  fill("skyblue");
+  block1.display();
+  block2.display();
+  block3.display();
+  block4.display();
+  block5.display();
+  fill("turquoise");
+  block6.display();
+  block7.display();
+  block8.display();
+  fill("pink");
+  block9.display();
+
   polygonObject.display();
  }
 
